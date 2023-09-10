@@ -1,6 +1,9 @@
-from django.http import HttpResponse
-from django.shortcuts import render,redirect
-
+from django.http import JsonResponse
 
 def homePage(request):
-    return HttpResponse("Hi there")
+    data={
+        'Status':'Success...Website Is Live.',
+        'Message':'Welcome To ProjectTree Website...!!!'
+    }
+    return JsonResponse(data)
+
